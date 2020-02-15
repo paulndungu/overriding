@@ -1,7 +1,7 @@
 import java.lang.annotation.Inherited
 
 open class sum(){
-    fun sum(n1:Int , n2:Int, n3:Int): Int{
+    open fun sum(n1:Int , n2:Int, n3:Int): Int{
         return n1+n2+n3
     }
     fun sub(n1:Int,n2: Int,n3: Int): Int {
@@ -10,6 +10,9 @@ open class sum(){
 }
 //----------------------------------------------------------------------------------------------------------------------
 class multipurpose(): sum() {
+    override fun sum(n1:Int , n2:Int, n3:Int): Int {
+        return n1 + n2 + n3+4
+    }
     fun div(n1:Float,n2:Float):Float{
         return n1/n2
     }
